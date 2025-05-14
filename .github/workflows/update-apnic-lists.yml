@@ -19,6 +19,11 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Delete all files in the output directory
+        run: |
+          rm -rf routeros_lists/*
+          rm -rf cidr_lists/*
+
       - name: Download APNIC data
         run: |
           wget -O /tmp/delegated-latest http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest

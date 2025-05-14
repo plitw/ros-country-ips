@@ -46,7 +46,7 @@ def generate_routeros_script(country_code, ip_list, is_ipv6=False):
     
     cmd_prefix = "/ipv6" if is_ipv6 else "/ip"
     
-    with open(filename, "w") as file:
+    with open(filename, "w+") as file:
         file.write(f"# {country_code.upper()} {ip_version} Address List for RouterOS\n")
         file.write(f"# Generated at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         file.write(f"# Source: APNIC delegated database\n\n")
@@ -59,7 +59,7 @@ def generate_routeros_script(country_code, ip_list, is_ipv6=False):
 def generate_plain_script(country_code, ip_list, is_ipv6=False):
     ip_version = "ipv6" if is_ipv6 else "ipv4"
     filename = f"{OUTPUT_TXT_DIR}/{country_code}_{ip_version}"
-    with open(filename, "w") as file:
+    with open(filename, "w+") as file:
         for cidr in ip_list:
             file.write(f"{cidr}\n")
 
