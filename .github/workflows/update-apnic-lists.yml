@@ -87,3 +87,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           branch: data
+          force: true
