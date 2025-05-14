@@ -1,5 +1,5 @@
 # MA ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:41:22
+# Generated at 2025-05-14 11:45:14
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ma_ipv4"]
