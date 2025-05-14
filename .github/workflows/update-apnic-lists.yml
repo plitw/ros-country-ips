@@ -80,3 +80,5 @@ jobs:
           git commit -m "update at $(date +'%Y-%m-%d %H:%M:%S')"
       - name: Push changes
         uses: ad-m/github-push-action@master
+        with:
+          branch: data

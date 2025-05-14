@@ -11,6 +11,9 @@ This repository automatically fetches and updates IP address ranges registered t
 
 ## How to Use
 
+### Data
+* Please check with branch `data`
+
 ### RouterOS Format
 
 RouterOS scripts are ready to be imported into your MikroTik router. They create address lists that can be used for firewall rules, routing decisions, etc.
