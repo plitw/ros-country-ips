@@ -21,9 +21,37 @@ jobs:
 
       - name: Download APNIC data
         run: |
-          wget -O /tmp/delegated-apnic-latest http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest
+          wget -O /tmp/delegated-latest http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest
           
       - name: Process APNIC data
+        run: |
+          python3 generate_routeros_lists.py
+      - name: Download RIPE data
+        run: |
+          wget -O /tmp/delegated-latest https://ftp.ripe.net/ripe/stats/delegated-ripencc-latest
+          
+      - name: Process RIPE data
+        run: |
+          python3 generate_routeros_lists.py
+      - name: Download AFRINIC data
+        run: |
+          wget -O /tmp/delegated-latest https://ftp.afrinic.net/pub/stats/afrinic/delegated-afrinic-latest
+          
+      - name: Process AFRINIC data
+        run: |
+          python3 generate_routeros_lists.py
+      - name: Download ARIN data
+        run: |
+          wget -O /tmp/delegated-latest https://ftp.arin.net/pub/stats/arin/delegated-arin-latest
+          
+      - name: Process ARIN data
+        run: |
+          python3 generate_routeros_lists.py
+      - name: Download LACNIC data
+        run: |
+          wget -O /tmp/delegated-latest https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-latest
+          
+      - name: Process LACNIC data
         run: |
           python3 generate_routeros_lists.py
           

@@ -14,7 +14,7 @@ os.makedirs(OUTPUT_TXT_DIR, exist_ok=True)
 def process_apnic_data():
     country_data = defaultdict(lambda: {"ipv4": [], "ipv6": []})
     
-    with open("/tmp/delegated-apnic-latest", "r") as file:
+    with open("/tmp/delegated-latest", "r") as file:
         for line in file:
             if line.startswith("#") or not line.strip():
                 continue
