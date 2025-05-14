@@ -1,5 +1,5 @@
 # PH ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ph_ipv4"]
@@ -841,8 +841,8 @@
 /ip firewall address-list add list="ph_ipv4" address=223.25.60.0/22 comment="ph_ipv4"
 /ip firewall address-list add list="ph_ipv4" address=223.130.16.0/22 comment="ph_ipv4"
 # PH ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ph_ipv4"]
 

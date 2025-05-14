@@ -1,6 +1,6 @@
 # GP ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="gp_ipv4"]
 
@@ -13,8 +13,8 @@
 /ip firewall address-list add list="gp_ipv4" address=213.188.160.0/19 comment="gp_ipv4"
 /ip firewall address-list add list="gp_ipv4" address=193.218.114.0/24 comment="gp_ipv4"
 # GP ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="gp_ipv4"]
 

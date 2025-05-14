@@ -1,5 +1,5 @@
 # GU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="gu_ipv4"]
@@ -32,8 +32,8 @@
 /ip firewall address-list add list="gu_ipv4" address=203.95.8.0/21 comment="gu_ipv4"
 /ip firewall address-list add list="gu_ipv4" address=203.215.52.0/22 comment="gu_ipv4"
 # GU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="gu_ipv4"]
 

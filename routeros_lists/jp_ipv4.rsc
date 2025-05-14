@@ -1,5 +1,5 @@
 # JP ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="jp_ipv4"]
@@ -4619,8 +4619,8 @@
 /ip firewall address-list add list="jp_ipv4" address=223.252.64.0/19 comment="jp_ipv4"
 /ip firewall address-list add list="jp_ipv4" address=223.252.112.0/20 comment="jp_ipv4"
 # JP ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="jp_ipv4"]
 
@@ -4638,8 +4638,8 @@
 /ip firewall address-list add list="jp_ipv4" address=203.189.232.0/22 comment="jp_ipv4"
 /ip firewall address-list add list="jp_ipv4" address=193.104.4.0/24 comment="jp_ipv4"
 # JP ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="jp_ipv4"]
 

@@ -1,5 +1,5 @@
 # CH ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ch_ipv4"]
@@ -10,8 +10,8 @@
 /ip firewall address-list add list="ch_ipv4" address=202.20.111.0/24 comment="ch_ipv4"
 /ip firewall address-list add list="ch_ipv4" address=203.14.166.0/24 comment="ch_ipv4"
 # CH ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ch_ipv4"]
 
@@ -2803,8 +2803,8 @@
 /ip firewall address-list add list="ch_ipv4" address=213.5.152.0/21 comment="ch_ipv4"
 /ip firewall address-list add list="ch_ipv4" address=216.181.158.0/23 comment="ch_ipv4"
 # CH ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ch_ipv4"]
 

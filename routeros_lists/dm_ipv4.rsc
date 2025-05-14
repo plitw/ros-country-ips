@@ -1,14 +1,14 @@
 # DM ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="dm_ipv4"]
 
 /ip firewall address-list add list="dm_ipv4" address=45.9.148.0/22 comment="dm_ipv4"
 /ip firewall address-list add list="dm_ipv4" address=193.169.160.0/23 comment="dm_ipv4"
 # DM ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="dm_ipv4"]
 

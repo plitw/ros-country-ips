@@ -1,5 +1,5 @@
 # GB ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="gb_ipv4"]
@@ -45,8 +45,8 @@
 /ip firewall address-list add list="gb_ipv4" address=210.79.186.0/23 comment="gb_ipv4"
 /ip firewall address-list add list="gb_ipv4" address=223.29.216.0/22 comment="gb_ipv4"
 # GB ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="gb_ipv4"]
 
@@ -8747,8 +8747,8 @@
 /ip firewall address-list add list="gb_ipv4" address=216.181.122.0/23 comment="gb_ipv4"
 /ip firewall address-list add list="gb_ipv4" address=216.245.80.0/24 comment="gb_ipv4"
 # GB ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="gb_ipv4"]
 

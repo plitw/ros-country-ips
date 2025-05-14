@@ -1,6 +1,6 @@
 # SX ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:26
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:30
+# Source: LACNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="sx_ipv4"]
 

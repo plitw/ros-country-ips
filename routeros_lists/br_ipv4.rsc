@@ -1,6 +1,6 @@
 # BR ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="br_ipv4"]
 
@@ -9,8 +9,8 @@
 /ip firewall address-list add list="br_ipv4" address=192.112.151.0/24 comment="br_ipv4"
 /ip firewall address-list add list="br_ipv4" address=192.112.178.0/24 comment="br_ipv4"
 # BR ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:26
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:30
+# Source: LACNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="br_ipv4"]
 

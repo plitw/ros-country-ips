@@ -1,5 +1,5 @@
 # AU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="au_ipv4"]
@@ -6602,8 +6602,8 @@
 /ip firewall address-list add list="au_ipv4" address=223.255.232.0/22 comment="au_ipv4"
 /ip firewall address-list add list="au_ipv4" address=223.255.255.0/24 comment="au_ipv4"
 # AU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="au_ipv4"]
 
@@ -6692,8 +6692,8 @@
 /ip firewall address-list add list="au_ipv4" address=195.43.154.0/24 comment="au_ipv4"
 /ip firewall address-list add list="au_ipv4" address=195.49.140.0/22 comment="au_ipv4"
 # AU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="au_ipv4"]
 

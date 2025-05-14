@@ -1,5 +1,5 @@
 # AE ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ae_ipv4"]
@@ -10,8 +10,8 @@
 /ip firewall address-list add list="ae_ipv4" address=103.152.182.0/23 comment="ae_ipv4"
 /ip firewall address-list add list="ae_ipv4" address=103.224.22.0/23 comment="ae_ipv4"
 # AE ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ae_ipv4"]
 
@@ -1063,8 +1063,8 @@
 /ip firewall address-list add list="ae_ipv4" address=195.95.219.0/24 comment="ae_ipv4"
 /ip firewall address-list add list="ae_ipv4" address=196.3.67.0/22 comment="ae_ipv4"
 # AE ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ae_ipv4"]
 

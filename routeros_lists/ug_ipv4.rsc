@@ -1,6 +1,6 @@
 # UG ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:23
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:27
+# Source: AFRINIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ug_ipv4"]
 
@@ -96,8 +96,8 @@
 /ip firewall address-list add list="ug_ipv4" address=197.239.0.0/18 comment="ug_ipv4"
 /ip firewall address-list add list="ug_ipv4" address=212.88.96.0/19 comment="ug_ipv4"
 # UG ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ug_ipv4"]
 

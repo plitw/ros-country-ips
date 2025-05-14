@@ -1,5 +1,5 @@
 # SE ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="se_ipv6"]
@@ -9,8 +9,8 @@
 /ipv6 firewall address-list add list="se_ipv6" address=2401:76a0::/31 comment="se_ipv6"
 /ipv6 firewall address-list add list="se_ipv6" address=2407:1600::/32 comment="se_ipv6"
 # SE ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="se_ipv6"]
 

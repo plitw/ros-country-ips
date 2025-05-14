@@ -1,5 +1,5 @@
 # VU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="vu_ipv4"]
@@ -24,8 +24,8 @@
 /ip firewall address-list add list="vu_ipv4" address=202.80.32.0/20 comment="vu_ipv4"
 /ip firewall address-list add list="vu_ipv4" address=203.191.128.0/22 comment="vu_ipv4"
 # VU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="vu_ipv4"]
 

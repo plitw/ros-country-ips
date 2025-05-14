@@ -1,5 +1,5 @@
 # MO ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="mo_ipv4"]
@@ -42,8 +42,8 @@
 /ip firewall address-list add list="mo_ipv4" address=202.175.96.0/19 comment="mo_ipv4"
 /ip firewall address-list add list="mo_ipv4" address=202.175.160.0/19 comment="mo_ipv4"
 # MO ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="mo_ipv4"]
 

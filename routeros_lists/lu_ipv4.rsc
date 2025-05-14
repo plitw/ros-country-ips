@@ -1,13 +1,13 @@
 # LU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="lu_ipv4"]
 
 /ip firewall address-list add list="lu_ipv4" address=103.178.28.0/23 comment="lu_ipv4"
 # LU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="lu_ipv4"]
 
@@ -553,8 +553,8 @@
 /ip firewall address-list add list="lu_ipv4" address=195.200.240.0/23 comment="lu_ipv4"
 /ip firewall address-list add list="lu_ipv4" address=195.246.100.0/23 comment="lu_ipv4"
 # LU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="lu_ipv4"]
 

@@ -1,6 +1,6 @@
 # CZ ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="cz_ipv6"]
 
@@ -684,8 +684,8 @@
 /ipv6 firewall address-list add list="cz_ipv6" address=2001:7f8:f6::/48 comment="cz_ipv6"
 /ipv6 firewall address-list add list="cz_ipv6" address=2001:7f8:130::/48 comment="cz_ipv6"
 # CZ ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="cz_ipv6"]
 

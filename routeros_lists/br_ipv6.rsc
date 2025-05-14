@@ -1,14 +1,14 @@
 # BR ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="br_ipv6"]
 
 /ipv6 firewall address-list add list="br_ipv6" address=2a00:aee0::/29 comment="br_ipv6"
 /ipv6 firewall address-list add list="br_ipv6" address=2a06:b700::/29 comment="br_ipv6"
 # BR ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:26
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:30
+# Source: LACNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="br_ipv6"]
 

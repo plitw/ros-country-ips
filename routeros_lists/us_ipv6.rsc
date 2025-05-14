@@ -1,5 +1,5 @@
 # US ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="us_ipv6"]
@@ -123,8 +123,8 @@
 /ipv6 firewall address-list add list="us_ipv6" address=2407:b9c0::/32 comment="us_ipv6"
 /ipv6 firewall address-list add list="us_ipv6" address=2407:ba40::/32 comment="us_ipv6"
 # US ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="us_ipv6"]
 
@@ -721,8 +721,8 @@
 /ipv6 firewall address-list add list="us_ipv6" address=2001:67c:2f8c::/48 comment="us_ipv6"
 /ipv6 firewall address-list add list="us_ipv6" address=2001:7f8:fd::/48 comment="us_ipv6"
 # US ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="us_ipv6"]
 
@@ -9918,8 +9918,8 @@
 /ipv6 firewall address-list add list="us_ipv6" address=2631:3000::/24 comment="us_ipv6"
 /ipv6 firewall address-list add list="us_ipv6" address=2632::/20 comment="us_ipv6"
 # US ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:26
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:30
+# Source: LACNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="us_ipv6"]
 

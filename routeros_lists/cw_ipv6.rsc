@@ -1,6 +1,6 @@
 # CW ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="cw_ipv6"]
 
@@ -8,8 +8,8 @@
 /ipv6 firewall address-list add list="cw_ipv6" address=2a0b:5f80::/29 comment="cw_ipv6"
 /ipv6 firewall address-list add list="cw_ipv6" address=2a0f:5680::/29 comment="cw_ipv6"
 # CW ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:26
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:30
+# Source: LACNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="cw_ipv6"]
 

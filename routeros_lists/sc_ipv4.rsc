@@ -1,5 +1,5 @@
 # SC ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="sc_ipv4"]
@@ -17,8 +17,8 @@
 /ip firewall address-list add list="sc_ipv4" address=205.201.0.0/20 comment="sc_ipv4"
 /ip firewall address-list add list="sc_ipv4" address=208.87.166.0/23 comment="sc_ipv4"
 # SC ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="sc_ipv4"]
 
@@ -858,8 +858,8 @@
 /ip firewall address-list add list="sc_ipv4" address=195.242.112.0/23 comment="sc_ipv4"
 /ip firewall address-list add list="sc_ipv4" address=195.245.80.0/23 comment="sc_ipv4"
 # SC ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:23
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: AFRINIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="sc_ipv4"]
 

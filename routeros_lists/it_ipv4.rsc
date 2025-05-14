@@ -1,5 +1,5 @@
 # IT ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="it_ipv4"]
@@ -10,8 +10,8 @@
 /ip firewall address-list add list="it_ipv4" address=103.189.190.0/23 comment="it_ipv4"
 /ip firewall address-list add list="it_ipv4" address=163.223.106.0/23 comment="it_ipv4"
 # IT ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="it_ipv4"]
 
@@ -3584,8 +3584,8 @@
 /ip firewall address-list add list="it_ipv4" address=199.34.66.0/24 comment="it_ipv4"
 /ip firewall address-list add list="it_ipv4" address=202.50.253.0/24 comment="it_ipv4"
 # IT ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="it_ipv4"]
 

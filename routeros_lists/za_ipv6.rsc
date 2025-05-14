@@ -1,6 +1,6 @@
 # ZA ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="za_ipv6"]
 
@@ -20,8 +20,8 @@
 /ipv6 firewall address-list add list="za_ipv6" address=2a14:5f00::/29 comment="za_ipv6"
 /ipv6 firewall address-list add list="za_ipv6" address=2001:67c:ef8::/48 comment="za_ipv6"
 # ZA ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:23
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:27
+# Source: AFRINIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="za_ipv6"]
 

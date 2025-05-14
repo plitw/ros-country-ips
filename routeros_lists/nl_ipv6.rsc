@@ -1,5 +1,5 @@
 # NL ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="nl_ipv6"]
@@ -14,8 +14,8 @@
 /ipv6 firewall address-list add list="nl_ipv6" address=2403:3300::/32 comment="nl_ipv6"
 /ipv6 firewall address-list add list="nl_ipv6" address=2404:e01::/32 comment="nl_ipv6"
 # NL ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="nl_ipv6"]
 
@@ -1915,8 +1915,8 @@
 /ipv6 firewall address-list add list="nl_ipv6" address=2001:7fb::/32 comment="nl_ipv6"
 /ipv6 firewall address-list add list="nl_ipv6" address=2001:7fd::/32 comment="nl_ipv6"
 # NL ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="nl_ipv6"]
 

@@ -1,6 +1,6 @@
 # CZ ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="cz_ipv4"]
 
@@ -1746,8 +1746,8 @@
 /ip firewall address-list add list="cz_ipv4" address=213.108.162.0/23 comment="cz_ipv4"
 /ip firewall address-list add list="cz_ipv4" address=213.108.164.0/22 comment="cz_ipv4"
 # CZ ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="cz_ipv4"]
 

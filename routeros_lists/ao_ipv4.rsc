@@ -1,13 +1,13 @@
 # AO ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ao_ipv4"]
 
 /ip firewall address-list add list="ao_ipv4" address=185.148.112.0/22 comment="ao_ipv4"
 # AO ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:23
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:27
+# Source: AFRINIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ao_ipv4"]
 

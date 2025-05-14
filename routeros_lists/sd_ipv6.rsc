@@ -1,6 +1,6 @@
 # SD ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:23
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:27
+# Source: AFRINIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="sd_ipv6"]
 

@@ -1,5 +1,5 @@
 # DE ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="de_ipv6"]
@@ -11,8 +11,8 @@
 /ipv6 firewall address-list add list="de_ipv6" address=2402:1880::/32 comment="de_ipv6"
 /ipv6 firewall address-list add list="de_ipv6" address=2403:8300::/32 comment="de_ipv6"
 # DE ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="de_ipv6"]
 
@@ -3047,8 +3047,8 @@
 /ipv6 firewall address-list add list="de_ipv6" address=2001:7f8:156::/48 comment="de_ipv6"
 /ipv6 firewall address-list add list="de_ipv6" address=2001:7f8:15b::/48 comment="de_ipv6"
 # DE ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="de_ipv6"]
 

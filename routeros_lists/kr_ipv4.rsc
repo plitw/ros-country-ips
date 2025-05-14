@@ -1,5 +1,5 @@
 # KR ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="kr_ipv4"]
@@ -2279,16 +2279,16 @@
 /ip firewall address-list add list="kr_ipv4" address=223.255.200.0/21 comment="kr_ipv4"
 /ip firewall address-list add list="kr_ipv4" address=223.255.208.0/20 comment="kr_ipv4"
 # KR ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="kr_ipv4"]
 
 /ip firewall address-list add list="kr_ipv4" address=91.240.89.0/24 comment="kr_ipv4"
 /ip firewall address-list add list="kr_ipv4" address=185.130.49.0/24 comment="kr_ipv4"
 # KR ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="kr_ipv4"]
 

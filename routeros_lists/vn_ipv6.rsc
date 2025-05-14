@@ -1,5 +1,5 @@
 # VN ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="vn_ipv6"]
@@ -892,8 +892,8 @@
 /ipv6 firewall address-list add list="vn_ipv6" address=2407:f1c0::/32 comment="vn_ipv6"
 /ipv6 firewall address-list add list="vn_ipv6" address=2407:f540::/32 comment="vn_ipv6"
 # VN ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="vn_ipv6"]
 

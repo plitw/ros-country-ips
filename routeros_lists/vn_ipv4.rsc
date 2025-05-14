@@ -1,5 +1,5 @@
 # VN ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="vn_ipv4"]
@@ -1580,8 +1580,8 @@
 /ip firewall address-list add list="vn_ipv4" address=223.27.104.0/21 comment="vn_ipv4"
 /ip firewall address-list add list="vn_ipv4" address=223.130.10.0/23 comment="vn_ipv4"
 # VN ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="vn_ipv4"]
 

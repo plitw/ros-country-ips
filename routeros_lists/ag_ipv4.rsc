@@ -1,6 +1,6 @@
 # AG ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ag_ipv4"]
 
@@ -26,8 +26,8 @@
 /ip firewall address-list add list="ag_ipv4" address=213.21.0.0/19 comment="ag_ipv4"
 /ip firewall address-list add list="ag_ipv4" address=213.21.48.0/20 comment="ag_ipv4"
 # AG ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ag_ipv4"]
 

@@ -1,5 +1,5 @@
 # GU ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="gu_ipv6"]
@@ -15,8 +15,8 @@
 /ipv6 firewall address-list add list="gu_ipv6" address=2405:7400::/32 comment="gu_ipv6"
 /ipv6 firewall address-list add list="gu_ipv6" address=2405:8d00::/32 comment="gu_ipv6"
 # GU ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:47:24
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: ARIN delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="gu_ipv6"]
 

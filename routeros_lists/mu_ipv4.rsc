@@ -1,20 +1,20 @@
 # MU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="mu_ipv4"]
 
 /ip firewall address-list add list="mu_ipv4" address=202.60.0.0/21 comment="mu_ipv4"
 # MU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="mu_ipv4"]
 
 /ip firewall address-list add list="mu_ipv4" address=37.139.132.0/22 comment="mu_ipv4"
 # MU ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:23
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:27
+# Source: AFRINIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="mu_ipv4"]
 

@@ -1,6 +1,6 @@
 # SN ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:23
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:28
+# Source: AFRINIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="sn_ipv4"]
 

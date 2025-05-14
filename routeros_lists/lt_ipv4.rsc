@@ -1,5 +1,5 @@
 # LT ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:18
+# Generated at 2025-05-14 11:52:22
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="lt_ipv4"]
@@ -9,8 +9,8 @@
 /ip firewall address-list add list="lt_ipv4" address=103.190.58.0/23 comment="lt_ipv4"
 /ip firewall address-list add list="lt_ipv4" address=202.47.180.0/23 comment="lt_ipv4"
 # LT ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:47:19
-# Source: APNIC delegated database
+# Generated at 2025-05-14 11:52:24
+# Source: RIPENCC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="lt_ipv4"]
 
