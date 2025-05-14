@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouterOS Country IP Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .country-emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: none;
+            color: #0066cc;
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+            background-color: #e6f0fa;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        #countryTable {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .links a {
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+
+            th,
+            td {
+                padding: 8px 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .country-emoji {
+                display: none;
+            }
+
+            th,
+            td {
+                padding: 6px 3px;
+                font-size: 0.9em;
+            }
+        }
+
+        #loading {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>RouterOS Country IP Lists</h1>
+    <p>This repository automatically fetches and updates IP address ranges registered to different countries from RIRs
+        delegated databases on a daily basis. The data is processed and made available in both CIDR format and RouterOS
+        script format.</p>
+
+    <h2>How to Use</h2>
+    <p>RouterOS scripts are ready to be imported into your MikroTik router. They create address lists that can be used
+        for firewall rules, routing decisions, etc.</p>
+    <p>Example of importing a country list:</p>
+    <pre>
+/tool fetch url="https://plitw.github.io/ros-country-ips/routeros_lists/tw_ipv4.rsc"
+/import file-name=tw_ipv4.rsc
+    </pre>
+
+    <h2>All Country Lists</h2>
+    <input type="text" id="searchInput" class="search-box" placeholder="Search for countries...">
+
+    <div id="loading">Loading country data...</div>
+
+    <table id="countryTable">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>IPv4 Lists</th>
+                <th>IPv6 Lists</th>
+            </tr>
+        </thead>
+        <tbody id="countryTableBody">
+            <!-- Table will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <footer style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+        <p>This project is updated daily via GitHub Actions. Data source: Delegated databases from RIRs.</p>
+        <p>For more information, visit the <a href="https://github.com/plitw/ros-country-ips">GitHub repository</a>.</p>
+    </footer>
+
+    <script>
+        // Country codes with their names and emoji flags
+        const countryData = {
+            "ad": { name: "Andorra", emoji: "🇦🇩" },
+            "ae": { name: "United Arab Emirates", emoji: "🇦🇪" },
+            "af": { name: "Afghanistan", emoji: "🇦🇫" },
+            "ag": { name: "Antigua and Barbuda", emoji: "🇦🇬" },
+            "ai": { name: "Anguilla", emoji: "🇦🇮" },
+            "al": { name: "Albania", emoji: "🇦🇱" },
+            "am": { name: "Armenia", emoji: "🇦🇲" },
+            "ao": { name: "Angola", emoji: "🇦🇴" },
+            "ar": { name: "Argentina", emoji: "🇦🇷" },
+            "as": { name: "American Samoa", emoji: "🇦🇸" },
+            "at": { name: "Austria", emoji: "🇦🇹" },
+            "au": { name: "Australia", emoji: "🇦🇺" },
+            "aw": { name: "Aruba", emoji: "🇦🇼" },
+            "ax": { name: "Åland Islands", emoji: "🇦🇽" },
+            "az": { name: "Azerbaijan", emoji: "🇦🇿" },
+            "ba": { name: "Bosnia and Herzegovina", emoji: "🇧🇦" },
+            "bb": { name: "Barbados", emoji: "🇧🇧" },
+            "bd": { name: "Bangladesh", emoji: "🇧🇩" },
+            "be": { name: "Belgium", emoji: "🇧🇪" },
+            "bf": { name: "Burkina Faso", emoji: "🇧🇫" },
+            "bg": { name: "Bulgaria", emoji: "🇧🇬" },
+            "bh": { name: "Bahrain", emoji: "🇧🇭" },
+            "bi": { name: "Burundi", emoji: "🇧🇮" },
+            "bj": { name: "Benin", emoji: "🇧🇯" },
+            "bl": { name: "Saint Barthélemy", emoji: "🇧🇱" },
+            "bm": { name: "Bermuda", emoji: "🇧🇲" },
+            "bn": { name: "Brunei", emoji: "🇧🇳" },
+            "bo": { name: "Bolivia", emoji: "🇧🇴" },
+            "bq": { name: "Bonaire, Sint Eustatius and Saba", emoji: "🇧🇶" },
+            "br": { name: "Brazil", emoji: "🇧🇷" },
+            "bs": { name: "Bahamas", emoji: "🇧🇸" },
+            "bt": { name: "Bhutan", emoji: "🇧🇹" },
+            "bw": { name: "Botswana", emoji: "🇧🇼" },
+            "by": { name: "Belarus", emoji: "🇧🇾" },
+            "bz": { name: "Belize", emoji: "🇧🇿" },
+            "ca": { name: "Canada", emoji: "🇨🇦" },
+            "cd": { name: "Congo (Democratic Republic)", emoji: "🇨🇩" },
+            "cf": { name: "Central African Republic", emoji: "🇨🇫" },
+            "cg": { name: "Congo", emoji: "🇨🇬" },
+            "ch": { name: "Switzerland", emoji: "🇨🇭" },
+            "ci": { name: "Côte d'Ivoire", emoji: "🇨🇮" },
+            "ck": { name: "Cook Islands", emoji: "🇨🇰" },
+            "cl": { name: "Chile", emoji: "🇨🇱" },
+            "cm": { name: "Cameroon", emoji: "🇨🇲" },
+            "cn": { name: "China", emoji: "🇨🇳" },
+            "co": { name: "Colombia", emoji: "🇨🇴" },
+            "cr": { name: "Costa Rica", emoji: "🇨🇷" },
+            "cu": { name: "Cuba", emoji: "🇨🇺" },
+            "cv": { name: "Cape Verde", emoji: "🇨🇻" },
+            "cw": { name: "Curaçao", emoji: "🇨🇼" },
+            "cy": { name: "Cyprus", emoji: "🇨🇾" },
+            "cz": { name: "Czech Republic", emoji: "🇨🇿" },
+            "de": { name: "Germany", emoji: "🇩🇪" },
+            "dj": { name: "Djibouti", emoji: "🇩🇯" },
+            "dk": { name: "Denmark", emoji: "🇩🇰" },
+            "dm": { name: "Dominica", emoji: "🇩🇲" },
+            "do": { name: "Dominican Republic", emoji: "🇩🇴" },
+            "dz": { name: "Algeria", emoji: "🇩🇿" },
+            "ec": { name: "Ecuador", emoji: "🇪🇨" },
+            "ee": { name: "Estonia", emoji: "🇪🇪" },
+            "eg": { name: "Egypt", emoji: "🇪🇬" },
+            "er": { name: "Eritrea", emoji: "🇪🇷" },
+            "es": { name: "Spain", emoji: "🇪🇸" },
+            "et": { name: "Ethiopia", emoji: "🇪🇹" },
+            "eu": { name: "European Union", emoji: "🇪🇺" },
+            "fi": { name: "Finland", emoji: "🇫🇮" },
+            "fj": { name: "Fiji", emoji: "🇫🇯" },
+            "fk": { name: "Falkland Islands", emoji: "🇫🇰" },
+            "fm": { name: "Micronesia", emoji: "🇫🇲" },
+            "fo": { name: "Faroe Islands", emoji: "🇫🇴" },
+            "fr": { name: "France", emoji: "🇫🇷" },
+            "ga": { name: "Gabon", emoji: "🇬🇦" },
+            "gb": { name: "United Kingdom", emoji: "🇬🇧" },
+            "gd": { name: "Grenada", emoji: "🇬🇩" },
+            "ge": { name: "Georgia", emoji: "🇬🇪" },
+            "gf": { name: "French Guiana", emoji: "🇬🇫" },
+            "gg": { name: "Guernsey", emoji: "🇬🇬" },
+            "gh": { name: "Ghana", emoji: "🇬🇭" },
+            "gi": { name: "Gibraltar", emoji: "🇬🇮" },
+            "gl": { name: "Greenland", emoji: "🇬🇱" },
+            "gm": { name: "Gambia", emoji: "🇬🇲" },
+            "gn": { name: "Guinea", emoji: "🇬🇳" },
+            "gp": { name: "Guadeloupe", emoji: "🇬🇵" },
+            "gq": { name: "Equatorial Guinea", emoji: "🇬🇶" },
+            "gr": { name: "Greece", emoji: "🇬🇷" },
+            "gt": { name: "Guatemala", emoji: "🇬🇹" },
+            "gu": { name: "Guam", emoji: "🇬🇺" },
+            "gw": { name: "Guinea-Bissau", emoji: "🇬🇼" },
+            "gy": { name: "Guyana", emoji: "🇬🇾" },
+            "hk": { name: "Hong Kong", emoji: "🇭🇰" },
+            "hn": { name: "Honduras", emoji: "🇭🇳" },
+            "hr": { name: "Croatia", emoji: "🇭🇷" },
+            "ht": { name: "Haiti", emoji: "🇭🇹" },
+            "hu": { name: "Hungary", emoji: "🇭🇺" },
+            "id": { name: "Indonesia", emoji: "🇮🇩" },
+            "ie": { name: "Ireland", emoji: "🇮🇪" },
+            "il": { name: "Israel", emoji: "🇮🇱" },
+            "im": { name: "Isle of Man", emoji: "🇮🇲" },
+            "in": { name: "India", emoji: "🇮🇳" },
+            "io": { name: "British Indian Ocean Territory", emoji: "🇮🇴" },
+            "iq": { name: "Iraq", emoji: "🇮🇶" },
+            "ir": { name: "Iran", emoji: "🇮🇷" },
+            "is": { name: "Iceland", emoji: "🇮🇸" },
+            "it": { name: "Italy", emoji: "🇮🇹" },
+            "je": { name: "Jersey", emoji: "🇯🇪" },
+            "jm": { name: "Jamaica", emoji: "🇯🇲" },
+            "jo": { name: "Jordan", emoji: "🇯🇴" },
+            "jp": { name: "Japan", emoji: "🇯🇵" },
+            "ke": { name: "Kenya", emoji: "🇰🇪" },
+            "kg": { name: "Kyrgyzstan", emoji: "🇰🇬" },
+            "kh": { name: "Cambodia", emoji: "🇰🇭" },
+            "ki": { name: "Kiribati", emoji: "🇰🇮" },
+            "km": { name: "Comoros", emoji: "🇰🇲" },
+            "kn": { name: "Saint Kitts and Nevis", emoji: "🇰🇳" },
+            "kp": { name: "North Korea", emoji: "🇰🇵" },
+            "kr": { name: "South Korea", emoji: "🇰🇷" },
+            "kw": { name: "Kuwait", emoji: "🇰🇼" },
+            "ky": { name: "Cayman Islands", emoji: "🇰🇾" },
+            "kz": { name: "Kazakhstan", emoji: "🇰🇿" },
+            "la": { name: "Laos", emoji: "🇱🇦" },
+            "lb": { name: "Lebanon", emoji: "🇱🇧" },
+            "lc": { name: "Saint Lucia", emoji: "🇱🇨" },
+            "li": { name: "Liechtenstein", emoji: "🇱🇮" },
+            "lk": { name: "Sri Lanka", emoji: "🇱🇰" },
+            "lr": { name: "Liberia", emoji: "🇱🇷" },
+            "ls": { name: "Lesotho", emoji: "🇱🇸" },
+            "lt": { name: "Lithuania", emoji: "🇱🇹" },
+            "lu": { name: "Luxembourg", emoji: "🇱🇺" },
+            "lv": { name: "Latvia", emoji: "🇱🇻" },
+            "ly": { name: "Libya", emoji: "🇱🇾" },
+            "ma": { name: "Morocco", emoji: "🇲🇦" },
+            "mc": { name: "Monaco", emoji: "🇲🇨" },
+            "md": { name: "Moldova", emoji: "🇲🇩" },
+            "me": { name: "Montenegro", emoji: "🇲🇪" },
+            "mf": { name: "Saint Martin", emoji: "🇲🇫" },
+            "mg": { name: "Madagascar", emoji: "🇲🇬" },
+            "mh": { name: "Marshall Islands", emoji: "🇲🇭" },
+            "mk": { name: "North Macedonia", emoji: "🇲🇰" },
+            "ml": { name: "Mali", emoji: "🇲🇱" },
+            "mm": { name: "Myanmar", emoji: "🇲🇲" },
+            "mn": { name: "Mongolia", emoji: "🇲🇳" },
+            "mo": { name: "Macau", emoji: "🇲🇴" },
+            "mp": { name: "Northern Mariana Islands", emoji: "🇲🇵" },
+            "mq": { name: "Martinique", emoji: "🇲🇶" },
+            "mr": { name: "Mauritania", emoji: "🇲🇷" },
+            "ms": { name: "Montserrat", emoji: "🇲🇸" },
+            "mt": { name: "Malta", emoji: "🇲🇹" },
+            "mu": { name: "Mauritius", emoji: "🇲🇺" },
+            "mv": { name: "Maldives", emoji: "🇲🇻" },
+            "mw": { name: "Malawi", emoji: "🇲🇼" },
+            "mx": { name: "Mexico", emoji: "🇲🇽" },
+            "my": { name: "Malaysia", emoji: "🇲🇾" },
+            "mz": { name: "Mozambique", emoji: "🇲🇿" },
+            "na": { name: "Namibia", emoji: "🇳🇦" },
+            "nc": { name: "New Caledonia", emoji: "🇳🇨" },
+            "ne": { name: "Niger", emoji: "🇳🇪" },
+            "nf": { name: "Norfolk Island", emoji: "🇳🇫" },
+            "ng": { name: "Nigeria", emoji: "🇳🇬" },
+            "ni": { name: "Nicaragua", emoji: "🇳🇮" },
+            "nl": { name: "Netherlands", emoji: "🇳🇱" },
+            "no": { name: "Norway", emoji: "🇳🇴" },
+            "np": { name: "Nepal", emoji: "🇳🇵" },
+            "nr": { name: "Nauru", emoji: "🇳🇷" },
+            "nu": { name: "Niue", emoji: "🇳🇺" },
+            "nz": { name: "New Zealand", emoji: "🇳🇿" },
+            "om": { name: "Oman", emoji: "🇴🇲" },
+            "pa": { name: "Panama", emoji: "🇵🇦" },
+            "pe": { name: "Peru", emoji: "🇵🇪" },
+            "pf": { name: "French Polynesia", emoji: "🇵🇫" },
+            "pg": { name: "Papua New Guinea", emoji: "🇵🇬" },
+            "ph": { name: "Philippines", emoji: "🇵🇭" },
+            "pk": { name: "Pakistan", emoji: "🇵🇰" },
+            "pl": { name: "Poland", emoji: "🇵🇱" },
+            "pm": { name: "Saint Pierre and Miquelon", emoji: "🇵🇲" },
+            "pr": { name: "Puerto Rico", emoji: "🇵🇷" },
+            "ps": { name: "Palestine", emoji: "🇵🇸" },
+            "pt": { name: "Portugal", emoji: "🇵🇹" },
+            "pw": { name: "Palau", emoji: "🇵🇼" },
+            "py": { name: "Paraguay", emoji: "🇵🇾" },
+            "qa": { name: "Qatar", emoji: "🇶🇦" },
+            "re": { name: "Réunion", emoji: "🇷🇪" },
+            "ro": { name: "Romania", emoji: "🇷🇴" },
+            "rs": { name: "Serbia", emoji: "🇷🇸" },
+            "ru": { name: "Russia", emoji: "🇷🇺" },
+            "rw": { name: "Rwanda", emoji: "🇷🇼" },
+            "sa": { name: "Saudi Arabia", emoji: "🇸🇦" },
+            "sb": { name: "Solomon Islands", emoji: "🇸🇧" },
+            "sc": { name: "Seychelles", emoji: "🇸🇨" },
+            "sd": { name: "Sudan", emoji: "🇸🇩" },
+            "se": { name: "Sweden", emoji: "🇸🇪" },
+            "sg": { name: "Singapore", emoji: "🇸🇬" },
+            "si": { name: "Slovenia", emoji: "🇸🇮" },
+            "sk": { name: "Slovakia", emoji: "🇸🇰" },
+            "sl": { name: "Sierra Leone", emoji: "🇸🇱" },
+            "sm": { name: "San Marino", emoji: "🇸🇲" },
+            "sn": { name: "Senegal", emoji: "🇸🇳" },
+            "so": { name: "Somalia", emoji: "🇸🇴" },
+            "sr": { name: "Suriname", emoji: "🇸🇷" },
+            "ss": { name: "South Sudan", emoji: "🇸🇸" },
+            "st": { name: "Sao Tome and Principe", emoji: "🇸🇹" },
+            "sv": { name: "El Salvador", emoji: "🇸🇻" },
+            "sx": { name: "Sint Maarten", emoji: "🇸🇽" },
+            "sy": { name: "Syria", emoji: "🇸🇾" },
+            "sz": { name: "Eswatini", emoji: "🇸🇿" },
+            "tc": { name: "Turks and Caicos Islands", emoji: "🇹🇨" },
+            "td": { name: "Chad", emoji: "🇹🇩" },
+            "tg": { name: "Togo", emoji: "🇹🇬" },
+            "th": { name: "Thailand", emoji: "🇹🇭" },
+            "tj": { name: "Tajikistan", emoji: "🇹🇯" },
+            "tk": { name: "Tokelau", emoji: "🇹🇰" },
+            "tl": { name: "Timor-Leste", emoji: "🇹🇱" },
+            "tm": { name: "Turkmenistan", emoji: "🇹🇲" },
+            "tn": { name: "Tunisia", emoji: "🇹🇳" },
+            "to": { name: "Tonga", emoji: "🇹🇴" },
+            "tr": { name: "Turkey", emoji: "🇹🇷" },
+            "tt": { name: "Trinidad and Tobago", emoji: "🇹🇹" },
+            "tv": { name: "Tuvalu", emoji: "🇹🇻" },
+            "tw": { name: "Taiwan", emoji: "🇹🇼" },
+            "tz": { name: "Tanzania", emoji: "🇹🇿" },
+            "ua": { name: "Ukraine", emoji: "🇺🇦" },
+            "ug": { name: "Uganda", emoji: "🇺🇬" },
+            "us": { name: "United States", emoji: "🇺🇸" },
+            "uy": { name: "Uruguay", emoji: "🇺🇾" },
+            "uz": { name: "Uzbekistan", emoji: "🇺🇿" },
+            "va": { name: "Vatican City", emoji: "🇻🇦" },
+            "vc": { name: "Saint Vincent and the Grenadines", emoji: "🇻🇨" },
+            "ve": { name: "Venezuela", emoji: "🇻🇪" },
+            "vg": { name: "British Virgin Islands", emoji: "🇻🇬" },
+            "vi": { name: "U.S. Virgin Islands", emoji: "🇻🇮" },
+            "vn": { name: "Vietnam", emoji: "🇻🇳" },
+            "vu": { name: "Vanuatu", emoji: "🇻🇺" },
+            "wf": { name: "Wallis and Futuna", emoji: "🇼🇫" },
+            "ws": { name: "Samoa", emoji: "🇼🇸" },
+            "ye": { name: "Yemen", emoji: "🇾🇪" },
+            "yt": { name: "Mayotte", emoji: "🇾🇹" },
+            "za": { name: "South Africa", emoji: "🇿🇦" },
+            "zm": { name: "Zambia", emoji: "🇿🇲" },
+            "zw": { name: "Zimbabwe", emoji: "🇿🇼" }
+        };
+
+        // List of country codes we have files for (from our PowerShell command)
+        const availableCountryCodes = ["ad", "ae", "af", "ag", "ai", "al", "am", "ao", "ar", "as", "at", "au", "aw", "ax", "az", "ba", "bb", "bd", "be", "bf", "bg", "bh", "bi", "bj", "bl", "bm", "bn", "bo", "bq", "br", "bs", "bt", "bw", "by", "bz", "ca", "cd", "cf", "cg", "ch", "ci", "ck", "cl", "cm", "cn", "co", "cr", "cu", "cv", "cw", "cy", "cz", "de", "dj", "dk", "dm", "do", "dz", "ec", "ee", "eg", "er", "es", "et", "eu", "fi", "fj", "fk", "fm", "fo", "fr", "ga", "gb", "gd", "ge", "gf", "gg", "gh", "gi", "gl", "gm", "gn", "gp", "gq", "gr", "gt", "gu", "gw", "gy", "hk", "hn", "hr", "ht", "hu", "id", "ie", "il", "im", "in", "io", "iq", "ir", "is", "it", "je", "jm", "jo", "jp", "ke", "kg", "kh", "ki", "km", "kn", "kp", "kr", "kw", "ky", "kz", "la", "lb", "lc", "li", "lk", "lr", "ls", "lt", "lu", "lv", "ly", "ma", "mc", "md", "me", "mf", "mg", "mh", "mk", "ml", "mm", "mn", "mo", "mp", "mq", "mr", "ms", "mt", "mu", "mv", "mw", "mx", "my", "mz", "na", "nc", "ne", "nf", "ng", "ni", "nl", "no", "np", "nr", "nu", "nz", "om", "pa", "pe", "pf", "pg", "ph", "pk", "pl", "pm", "pr", "ps", "pt", "pw", "py", "qa", "re", "ro", "rs", "ru", "rw", "sa", "sb", "sc", "sd", "se", "sg", "si", "sk", "sl", "sm", "sn", "so", "sr", "ss", "st", "sv", "sx", "sy", "sz", "tc", "td", "tg", "th", "tj", "tk", "tl", "tm", "tn", "to", "tr", "tt", "tv", "tw", "tz", "ua", "ug", "us", "uy", "uz", "va", "vc", "ve", "vg", "vi", "vn", "vu", "wf", "ws", "ye", "yt", "za", "zm", "zw"];
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get reference to table body and loading element
+            const tableBody = document.getElementById('countryTableBody');
+            const loading = document.getElementById('loading');
+
+            // Sort country codes by country name
+            availableCountryCodes.sort((a, b) => {
+                const nameA = countryData[a] ? countryData[a].name : a.toUpperCase();
+                const nameB = countryData[b] ? countryData[b].name : b.toUpperCase();
+                return nameA.localeCompare(nameB);
+            });
+
+            // Generate table rows
+            availableCountryCodes.forEach(countryCode => {
+                // Skip if we don't have data for this country code
+                if (!countryData[countryCode]) {
+                    console.warn(`No data for country code: ${countryCode}`);
+                    return;
+                }
+
+                const country = countryData[countryCode];
+
+                // Create table row
+                const row = document.createElement('tr');
+
+                // Country name cell
+                const nameCell = document.createElement('td');
+                const emoji = document.createElement('span');
+                emoji.className = 'country-emoji';
+                emoji.textContent = country.emoji;
+                nameCell.appendChild(emoji);
+                nameCell.appendChild(document.createTextNode(` ${country.name} (${countryCode.toUpperCase()})`));
+                row.appendChild(nameCell);
+
+                // IPv4 links cell
+                const ipv4Cell = document.createElement('td');
+                ipv4Cell.className = 'links';
+
+                const cidrV4Link = document.createElement('a');
+                cidrV4Link.href = `cidr_lists/${countryCode}_ipv4`;
+                cidrV4Link.textContent = 'CIDR';
+                ipv4Cell.appendChild(cidrV4Link);
+
+                const routerosV4Link = document.createElement('a');
+                routerosV4Link.href = `routeros_lists/${countryCode}_ipv4.rsc`;
+                routerosV4Link.textContent = 'RouterOS';
+                ipv4Cell.appendChild(routerosV4Link);
+
+                row.appendChild(ipv4Cell);
+
+                // IPv6 links cell
+                const ipv6Cell = document.createElement('td');
+                ipv6Cell.className = 'links';
+
+                const cidrV6Link = document.createElement('a');
+                cidrV6Link.href = `cidr_lists/${countryCode}_ipv6`;
+                cidrV6Link.textContent = 'CIDR';
+                ipv6Cell.appendChild(cidrV6Link);
+
+                const routerosV6Link = document.createElement('a');
+                routerosV6Link.href = `routeros_lists/${countryCode}_ipv6.rsc`;
+                routerosV6Link.textContent = 'RouterOS';
+                ipv6Cell.appendChild(routerosV6Link);
+
+                row.appendChild(ipv6Cell);
+
+                // Add row to table
+                tableBody.appendChild(row);
+            });
+
+            // Hide loading indicator
+            loading.style.display = 'none';
+
+            // Set up search functionality
+            document.getElementById('searchInput').addEventListener('keyup', function () {
+                const input = this.value.toLowerCase();
+                const rows = document.querySelectorAll('#countryTable tbody tr');
+
+                rows.forEach(row => {
+                    const countryName = row.querySelector('td:first-child').textContent.toLowerCase();
+                    if (countryName.includes(input)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        }); 
+    </script>
+</body>
+
+</html>
