@@ -1,0 +1,47 @@
+name: Update APNIC IP Lists
+
+on:
+  schedule:
+    # 每天 12:01 GMT+8 (04:01 UTC)
+    - cron: '1 4 * * *'
+  workflow_dispatch:  # 允許手動觸發
+
+jobs:
+  update-lists:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Download APNIC data
+        run: |
+          wget -O /tmp/delegated-apnic-latest http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest
+          
+      - name: Process APNIC data
+        run: |
+          python3 generate_routeros_lists.py
+          
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            echo "Changes detected."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "No changes detected."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "update at $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
