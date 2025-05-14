@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '1 4 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   update-lists:
