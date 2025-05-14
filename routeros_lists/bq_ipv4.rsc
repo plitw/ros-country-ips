@@ -1,5 +1,12 @@
 # BQ ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:17
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="bq_ipv4"]
+
+/ip firewall address-list add list="bq_ipv4" address=193.17.35.0/24 comment="bq_ipv4"
+# BQ ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:26
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="bq_ipv4"]

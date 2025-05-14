@@ -1,5 +1,5 @@
 # BL ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:15
+# Generated at 2025-05-14 11:47:24
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="bl_ipv4"]

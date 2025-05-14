@@ -1,5 +1,12 @@
 # KE ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="ke_ipv6"]
+
+/ipv6 firewall address-list add list="ke_ipv6" address=2a0a:1b80::/29 comment="ke_ipv6"
+# KE ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="ke_ipv6"]

@@ -1,5 +1,12 @@
 # IM ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:11
+# Generated at 2025-05-14 11:47:18
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="im_ipv4"]
+
+/ip firewall address-list add list="im_ipv4" address=103.214.248.0/23 comment="im_ipv4"
+# IM ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:19
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="im_ipv4"]

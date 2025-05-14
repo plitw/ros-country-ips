@@ -1,5 +1,23 @@
 # BZ ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:45:17
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="bz_ipv6"]
+
+/ipv6 firewall address-list add list="bz_ipv6" address=2a04:2280::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a05:840::/30 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a05:6200::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a07:180::/32 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a07:e00::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a07:a0c0::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a07:e000::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a0a:11c0::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a0d:7a00::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a0d:a740::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2a10:de00::/29 comment="bz_ipv6"
+/ipv6 firewall address-list add list="bz_ipv6" address=2001:67c:255c::/48 comment="bz_ipv6"
+# BZ ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:26
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="bz_ipv6"]

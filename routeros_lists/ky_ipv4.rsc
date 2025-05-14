@@ -1,5 +1,16 @@
 # KY ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:15
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="ky_ipv4"]
+
+/ip firewall address-list add list="ky_ipv4" address=45.144.204.0/22 comment="ky_ipv4"
+/ip firewall address-list add list="ky_ipv4" address=45.152.156.0/22 comment="ky_ipv4"
+/ip firewall address-list add list="ky_ipv4" address=185.158.252.0/22 comment="ky_ipv4"
+/ip firewall address-list add list="ky_ipv4" address=148.51.0.0/17 comment="ky_ipv4"
+/ip firewall address-list add list="ky_ipv4" address=157.207.32.0/22 comment="ky_ipv4"
+# KY ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:24
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="ky_ipv4"]

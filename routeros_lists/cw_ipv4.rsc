@@ -1,5 +1,17 @@
 # CW ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:17
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="cw_ipv4"]
+
+/ip firewall address-list add list="cw_ipv4" address=81.29.0.0/20 comment="cw_ipv4"
+/ip firewall address-list add list="cw_ipv4" address=185.149.84.0/22 comment="cw_ipv4"
+/ip firewall address-list add list="cw_ipv4" address=185.185.184.0/22 comment="cw_ipv4"
+/ip firewall address-list add list="cw_ipv4" address=193.23.16.0/22 comment="cw_ipv4"
+/ip firewall address-list add list="cw_ipv4" address=217.78.240.0/20 comment="cw_ipv4"
+/ip firewall address-list add list="cw_ipv4" address=91.194.236.0/23 comment="cw_ipv4"
+# CW ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:26
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="cw_ipv4"]

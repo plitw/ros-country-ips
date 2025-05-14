@@ -1,5 +1,40 @@
 # PA ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:45:17
+# Generated at 2025-05-14 11:47:18
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="pa_ipv6"]
+
+/ipv6 firewall address-list add list="pa_ipv6" address=2407:e8c0::/32 comment="pa_ipv6"
+# PA ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="pa_ipv6"]
+
+/ipv6 firewall address-list add list="pa_ipv6" address=2a02:29b8::/32 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a05:3ac0::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a06:bbc0::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a09:4ac0::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a09:a700::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a0c:de80::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a10:7980::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a10:9100::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a11:4c0::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a11:c6c0::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a11:eb00::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a12:1500::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a12:8a80::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2a13:240::/29 comment="pa_ipv6"
+/ipv6 firewall address-list add list="pa_ipv6" address=2001:678:7c4::/48 comment="pa_ipv6"
+# PA ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:24
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="pa_ipv6"]
+
+/ipv6 firewall address-list add list="pa_ipv6" address=2602:f68a::/40 comment="pa_ipv6"
+# PA ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:26
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="pa_ipv6"]

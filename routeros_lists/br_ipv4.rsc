@@ -1,5 +1,15 @@
 # BR ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:17
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="br_ipv4"]
+
+/ip firewall address-list add list="br_ipv4" address=93.158.236.0/22 comment="br_ipv4"
+/ip firewall address-list add list="br_ipv4" address=185.30.164.0/22 comment="br_ipv4"
+/ip firewall address-list add list="br_ipv4" address=192.112.151.0/24 comment="br_ipv4"
+/ip firewall address-list add list="br_ipv4" address=192.112.178.0/24 comment="br_ipv4"
+# BR ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:26
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="br_ipv4"]

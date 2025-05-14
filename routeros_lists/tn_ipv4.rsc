@@ -1,5 +1,15 @@
 # TN ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="tn_ipv4"]
+
+/ip firewall address-list add list="tn_ipv4" address=91.198.207.0/24 comment="tn_ipv4"
+/ip firewall address-list add list="tn_ipv4" address=193.39.113.0/24 comment="tn_ipv4"
+/ip firewall address-list add list="tn_ipv4" address=193.105.15.0/24 comment="tn_ipv4"
+/ip firewall address-list add list="tn_ipv4" address=193.218.123.0/24 comment="tn_ipv4"
+# TN ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="tn_ipv4"]

@@ -1,5 +1,46 @@
 # PA ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:17
+# Generated at 2025-05-14 11:47:18
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="pa_ipv4"]
+
+/ip firewall address-list add list="pa_ipv4" address=103.86.96.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=103.173.150.0/23 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=116.204.192.0/22 comment="pa_ipv4"
+# PA ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="pa_ipv4"]
+
+/ip firewall address-list add list="pa_ipv4" address=5.252.152.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=31.7.56.0/21 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=46.19.136.0/21 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=77.73.184.0/21 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=81.17.16.0/20 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=92.62.208.0/20 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=92.249.36.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=141.98.80.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=141.255.160.0/21 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=185.12.44.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=185.72.148.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=185.135.45.0/24 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=185.143.220.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=185.190.24.0/24 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=194.50.196.0/22 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=203.21.66.0/24 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=194.165.16.0/23 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=195.189.242.0/23 comment="pa_ipv4"
+# PA ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:24
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="pa_ipv4"]
+
+/ip firewall address-list add list="pa_ipv4" address=23.137.100.0/24 comment="pa_ipv4"
+/ip firewall address-list add list="pa_ipv4" address=208.89.86.0/23 comment="pa_ipv4"
+# PA ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:26
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="pa_ipv4"]

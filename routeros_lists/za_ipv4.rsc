@@ -1,5 +1,23 @@
 # ZA ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="za_ipv4"]
+
+/ip firewall address-list add list="za_ipv4" address=2.59.96.0/22 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=45.149.224.0/22 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=146.19.55.0/24 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=176.67.176.0/21 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=185.3.28.0/22 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=185.39.236.0/22 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=185.68.84.0/22 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=185.195.40.0/22 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=185.196.124.0/23 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=185.235.184.0/22 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=194.26.203.0/24 comment="za_ipv4"
+/ip firewall address-list add list="za_ipv4" address=195.123.126.0/23 comment="za_ipv4"
+# ZA ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="za_ipv4"]
