@@ -46,12 +46,15 @@ def generate_routeros_script(country_code, ip_list, is_ipv6=False, registry=""):
     
     cmd_prefix = "/ipv6" if is_ipv6 else "/ip"
     
+    exists = os.path.exists(filename)
+
     with open(filename, "a") as file:
         file.write(f"# {country_code.upper()} {ip_version} Address List for RouterOS\n")
         file.write(f"# Generated at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         file.write(f"# Source: {registry.upper()} delegated database\n\n")
         
-        file.write(f"{cmd_prefix} firewall address-list remove [find comment=\"{country_code}_{ip_version}\"]\n\n")
+        if not exists:
+            file.write(f"{cmd_prefix} firewall address-list remove [find comment=\"{country_code}_{ip_version}\"]\n\n")
         
         for cidr in ip_list:
             file.write(f"{cmd_prefix} firewall address-list add list=\"{country_code}_{ip_version}\" address={cidr} comment=\"{country_code}_{ip_version}\"\n")
