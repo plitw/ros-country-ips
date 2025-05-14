@@ -59,6 +59,11 @@ jobs:
       - name: Process LACNIC data
         run: |
           python3 generate_routeros_lists.py
+      
+      - name: Clean up
+        run: |
+          rm -rf .github
+          rm -rf generate_routeros_lists.py
           
       - name: Check for changes
         id: check_changes
