@@ -66,6 +66,7 @@ jobs:
       - name: Clean up
         run: |
           rm -rf .github
+          rm .gitignore
           rm -rf generate_routeros_lists.py
           
       - name: Check for changes
