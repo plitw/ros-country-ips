@@ -53,9 +53,8 @@ def generate_routeros_script(country_code, ip_list, is_ipv6=False, registry=""):
         file.write(f"# Generated at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         file.write(f"# Source: {registry.upper()} delegated database\n\n")
 
-        file.write(f"{cmd_prefix} firewall address-list\n")
-
         if not exists:
+            file.write(f"{cmd_prefix} firewall address-list\n")
             file.write(f"remove [find comment=\"{country_code}_{ip_version}\"]\n\n")
         
         for cidr in ip_list:
