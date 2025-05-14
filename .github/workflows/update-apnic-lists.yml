@@ -49,7 +49,7 @@ jobs:
           python3 generate_routeros_lists.py
       - name: Download LACNIC data
         run: |
-          wget -O /tmp/delegated-latest https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-latest
+          wget -O /tmp/delegated-latest https://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest
           
       - name: Process LACNIC data
         run: |
