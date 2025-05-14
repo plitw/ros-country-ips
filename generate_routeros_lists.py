@@ -56,6 +56,8 @@ def generate_routeros_script(country_code, ip_list, is_ipv6=False, registry=""):
         for cidr in ip_list:
             file.write(f"{cmd_prefix} firewall address-list add list=\"{country_code}_{ip_version}\" address={cidr} comment=\"{country_code}_{ip_version}\"\n")
 
+        file.write("\n")
+
 def generate_plain_script(country_code, ip_list, is_ipv6=False, registry=""):
     ip_version = "ipv6" if is_ipv6 else "ipv4"
     filename = f"{OUTPUT_TXT_DIR}/{country_code}_{ip_version}"
