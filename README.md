@@ -5,7 +5,7 @@ This repository automatically fetches and updates IP address ranges registered t
 ## Overview
 
 - Updated daily via GitHub Actions
-- Data source: APNIC delegated database
+- Data source: Delegated databases from RIRs
 - Available in both IPv4 and IPv6 formats
 - Each country's IP ranges are organized into separate files
 
