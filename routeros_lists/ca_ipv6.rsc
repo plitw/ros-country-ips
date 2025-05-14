@@ -1,5 +1,57 @@
 # CA ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:45:15
+# Generated at 2025-05-14 11:47:18
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="ca_ipv6"]
+
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:df0:a280::/48 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:df0:bd80::/48 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:df1:ee80::/48 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2400:b820::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2401:1fe0::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2402:5cc0::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2403:20c0::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2407:4b80::/32 comment="ca_ipv6"
+# CA ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="ca_ipv6"]
+
+/ipv6 firewall address-list add list="ca_ipv6" address=2a00:1ce0::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a00:5de0::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a01:3e0::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a01:7f60::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a01:e940::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a02:2468::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a02:2818::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a03:6540::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a04:7d40::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a04:a380::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a05:4c40::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a05:79c0::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a07:ff80::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0a:e340::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0b:ac0::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0b:4040::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0b:aac0::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0e:800::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0e:dd40::/32 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0f:7880::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0f:7980::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0f:b240::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a0f:ec80::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a11:840::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a12:ea40::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a13:b780::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2a14:d280::/29 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:67c:af0::/48 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:67c:d0c::/48 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:67c:f9c::/48 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:67c:2140::/48 comment="ca_ipv6"
+/ipv6 firewall address-list add list="ca_ipv6" address=2001:67c:2918::/48 comment="ca_ipv6"
+# CA ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:24
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="ca_ipv6"]

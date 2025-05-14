@@ -1,5 +1,12 @@
 # DO ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:17
+# Generated at 2025-05-14 11:47:24
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="do_ipv4"]
+
+/ip firewall address-list add list="do_ipv4" address=205.233.76.0/22 comment="do_ipv4"
+# DO ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:26
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="do_ipv4"]

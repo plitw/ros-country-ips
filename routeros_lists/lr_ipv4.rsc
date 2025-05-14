@@ -1,5 +1,12 @@
 # LR ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="lr_ipv4"]
+
+/ip firewall address-list add list="lr_ipv4" address=89.207.159.0/24 comment="lr_ipv4"
+# LR ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="lr_ipv4"]

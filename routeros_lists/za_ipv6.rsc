@@ -1,5 +1,26 @@
 # ZA ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="za_ipv6"]
+
+/ipv6 firewall address-list add list="za_ipv6" address=2a01:5380::/32 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a02:47c0::/32 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a05:1680::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0b:af00::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0c:2e00::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0c:4540::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0d:7100::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0d:9080::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0d:b980::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0e:3900::/32 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a0e:9a80::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a12:800::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a12:4900::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2a14:5f00::/29 comment="za_ipv6"
+/ipv6 firewall address-list add list="za_ipv6" address=2001:67c:ef8::/48 comment="za_ipv6"
+# ZA ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="za_ipv6"]

@@ -1,5 +1,20 @@
 # RE ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="re_ipv4"]
+
+/ip firewall address-list add list="re_ipv4" address=5.57.96.0/19 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=78.108.224.0/20 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=80.69.208.0/20 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=109.122.128.0/18 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=185.147.224.0/22 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=185.161.8.0/22 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=185.165.32.0/22 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=213.55.0.0/18 comment="re_ipv4"
+/ip firewall address-list add list="re_ipv4" address=193.56.203.0/24 comment="re_ipv4"
+# RE ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="re_ipv4"]

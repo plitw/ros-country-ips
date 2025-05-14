@@ -1,5 +1,12 @@
 # MZ ipv4 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ip firewall address-list remove [/ip firewall address-list find list="mz_ipv4"]
+
+/ip firewall address-list add list="mz_ipv4" address=195.140.248.0/22 comment="mz_ipv4"
+# MZ ipv4 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ip firewall address-list remove [/ip firewall address-list find list="mz_ipv4"]

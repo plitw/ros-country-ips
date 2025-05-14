@@ -1,5 +1,12 @@
 # NG ipv6 Address List for RouterOS
-# Generated at 2025-05-14 11:45:14
+# Generated at 2025-05-14 11:47:19
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list remove [/ipv6 firewall address-list find list="ng_ipv6"]
+
+/ipv6 firewall address-list add list="ng_ipv6" address=2a06:b940::/29 comment="ng_ipv6"
+# NG ipv6 Address List for RouterOS
+# Generated at 2025-05-14 11:47:23
 # Source: APNIC delegated database
 
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list="ng_ipv6"]
