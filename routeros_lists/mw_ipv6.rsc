@@ -1,0 +1,38 @@
+# MW ipv6 Address List for RouterOS
+# Generated at 2025-06-15 04:34:44
+# Source: AFRINIC delegated database
+
+/ipv6 firewall address-list
+remove [find comment="mw_ipv6"]
+
+add list="mw_ipv6" address=2001:43f8:20::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43f8:380::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43f8:1130::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43f8:13a0::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43f8:13e0::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43f8:1640::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43f8:1720::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43fc:800::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43fc:d000::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43fd:1000::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43fd:d000::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43fd:f000::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2001:43ff:f000::/48 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0e:7800::/24 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0e:7e80::/28 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:1300::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:3740::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:57c0::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:7300::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:ea60::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:ea80::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:eba8::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:edb8::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:f510::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:f9a0::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:fac0::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:fc48::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:fc58::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:fd50::/32 comment="mw_ipv6"
+add list="mw_ipv6" address=2c0f:fde8::/32 comment="mw_ipv6"
+

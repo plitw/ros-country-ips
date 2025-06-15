@@ -1,0 +1,37 @@
+# PG ipv6 Address List for RouterOS
+# Generated at 2025-06-15 04:34:37
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list
+remove [find comment="pg_ipv6"]
+
+add list="pg_ipv6" address=2001:c60::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:dea:8000::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df0:700::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df1:b00::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df1:bdc0::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df1:fb80::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df2:1500::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df3:4c00::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df3:c880::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df3:d840::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df4:3e80::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df4:6900::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df6:a880::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df7:5c80::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df7:8c80::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2001:df7:b200::/48 comment="pg_ipv6"
+add list="pg_ipv6" address=2400:9300::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2400:94e0::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2400:bd20::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2401:53c0::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2401:d540::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2401:e8e0::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2401:f680::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2402:58c0::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2404:6400::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2404:f440::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2405:9f40::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2407:1800::/32 comment="pg_ipv6"
+add list="pg_ipv6" address=2407:3b00::/32 comment="pg_ipv6"
+

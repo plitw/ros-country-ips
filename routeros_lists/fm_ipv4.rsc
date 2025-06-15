@@ -1,0 +1,13 @@
+# FM ipv4 Address List for RouterOS
+# Generated at 2025-06-15 04:34:37
+# Source: APNIC delegated database
+
+/ip firewall address-list
+remove [find comment="fm_ipv4"]
+
+add list="fm_ipv4" address=43.248.156.0/22 comment="fm_ipv4"
+add list="fm_ipv4" address=103.39.252.0/22 comment="fm_ipv4"
+add list="fm_ipv4" address=103.166.208.0/23 comment="fm_ipv4"
+add list="fm_ipv4" address=119.252.112.0/20 comment="fm_ipv4"
+add list="fm_ipv4" address=124.109.8.0/21 comment="fm_ipv4"
+

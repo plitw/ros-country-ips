@@ -1,0 +1,115 @@
+# PA ipv6 Address List for RouterOS
+# Generated at 2025-06-15 04:34:37
+# Source: APNIC delegated database
+
+/ipv6 firewall address-list
+remove [find comment="pa_ipv6"]
+
+add list="pa_ipv6" address=2407:e8c0::/32 comment="pa_ipv6"
+
+# PA ipv6 Address List for RouterOS
+# Generated at 2025-06-15 04:34:39
+# Source: RIPENCC delegated database
+
+add list="pa_ipv6" address=2a02:29b8::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2a05:3ac0::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a06:bbc0::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a09:4ac0::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a09:a700::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a0c:de80::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a10:7980::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a10:9100::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a11:4c0::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a11:c6c0::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a11:eb00::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a12:1500::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a12:8a80::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2a13:240::/29 comment="pa_ipv6"
+add list="pa_ipv6" address=2001:678:7c4::/48 comment="pa_ipv6"
+
+# PA ipv6 Address List for RouterOS
+# Generated at 2025-06-15 04:34:44
+# Source: ARIN delegated database
+
+add list="pa_ipv6" address=2602:f68a::/40 comment="pa_ipv6"
+
+# PA ipv6 Address List for RouterOS
+# Generated at 2025-06-15 04:34:46
+# Source: LACNIC delegated database
+
+add list="pa_ipv6" address=2001:1368::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2800:140::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2800:350::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2800:351::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2800:352::/31 comment="pa_ipv6"
+add list="pa_ipv6" address=2800:354::/30 comment="pa_ipv6"
+add list="pa_ipv6" address=2800:980::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2800:ce0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:0:240::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:0:2d0::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:0:490::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:13:8800::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:14:d000::/44 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:16:3000::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:16:7800::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:17:9000::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:17:c000::/44 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:19:1000::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:1b:7000::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:1b:c000::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:1c:6000::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:1e:2800::/48 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:138::/40 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:158::/36 comment="pa_ipv6"
+add list="pa_ipv6" address=2801:180::/44 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:200::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:600::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:b80::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:2900::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:2940::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:2b00::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:2d80::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:2e40::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:3000::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:3400::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:34a0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:3520::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:3620::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:4300::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:4590::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:4710::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:4be0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:5120::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:5550::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:58a0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:6e20::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:7280::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:7bc0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:8960::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:8c80::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:9590::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:96c0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:9e40::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:a380::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:ac40::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:ad80::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:ae40::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:b710::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:bd80::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:c560::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:c820::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:cb50::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:ce90::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:d040::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:d6c0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:d840::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:db60::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:dd50::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:e240::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:e600::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:ed40::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:f090::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:f0e0::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:f520::/32 comment="pa_ipv6"
+add list="pa_ipv6" address=2803:fb00::/32 comment="pa_ipv6"
+

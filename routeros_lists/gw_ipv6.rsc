@@ -1,0 +1,10 @@
+# GW ipv6 Address List for RouterOS
+# Generated at 2025-06-15 04:34:44
+# Source: AFRINIC delegated database
+
+/ipv6 firewall address-list
+remove [find comment="gw_ipv6"]
+
+add list="gw_ipv6" address=2c0f:ec50::/32 comment="gw_ipv6"
+add list="gw_ipv6" address=2c0f:f928::/32 comment="gw_ipv6"
+

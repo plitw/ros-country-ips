@@ -1,0 +1,12 @@
+# CF ipv4 Address List for RouterOS
+# Generated at 2025-06-15 04:34:44
+# Source: AFRINIC delegated database
+
+/ip firewall address-list
+remove [find comment="cf_ipv4"]
+
+add list="cf_ipv4" address=41.78.120.0/22 comment="cf_ipv4"
+add list="cf_ipv4" address=41.223.184.0/22 comment="cf_ipv4"
+add list="cf_ipv4" address=169.239.96.0/22 comment="cf_ipv4"
+add list="cf_ipv4" address=197.242.176.0/21 comment="cf_ipv4"
+
