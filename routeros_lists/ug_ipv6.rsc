@@ -1,0 +1,47 @@
+# UG ipv6 Address List for RouterOS
+# Generated at 2026-09-05 08:14:54
+# Source: AFRINIC delegated database
+
+/ipv6 firewall address-list
+remove [find comment="ug_ipv6"]
+
+add list="ug_ipv6" address=2001:43f8:130::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43f8:a30::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43f8:ad0::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43f8:d40::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43f8:1320::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43f8:1370::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43f8:1a20::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43f8:1a21::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43fd:e800::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43fe:3000::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43ff::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2001:43ff:2800::/48 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:3a0::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:1dc0::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:3d00::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:4540::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:4b00::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:5120::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:59c0::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:7140::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:77c0::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:7a80::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:7e40::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:e910::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:e950::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:ebe0::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:efb8::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:f168::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:f200::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:f658::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:f6d0::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:f750::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:fb00::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:fbc8::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:fd60::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:fe10::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:fec0::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:ff98::/32 comment="ug_ipv6"
+add list="ug_ipv6" address=2c0f:ffa0::/32 comment="ug_ipv6"
+
